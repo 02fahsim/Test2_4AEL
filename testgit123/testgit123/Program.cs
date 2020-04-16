@@ -11,18 +11,21 @@ namespace testgit
         
         static void Main(string[] args)
         {
-            Titel("Dies ist ein Test");
+            Titel("Dies ist ein Test",ConsoleColor.Green);
+
+            Console.WriteLine("TESTMERGLER");
             Console.ReadKey();
+
         }
 
-        static void Titel(string titel)
+        static void Titel(string titel, ConsoleColor textfarbe)
         {
             int breite = Console.WindowWidth;
             int textlengh = titel.Length;
-
+            ConsoleColor aktTextFarbe = Console.ForegroundColor; //aktuelle Farbe speichern
 
             Console.Clear();
-
+            Console.ForegroundColor = textfarbe;
             for (int i = 0; i < Console.WindowWidth; i++)
             {
                 Console.Write("*");
@@ -39,6 +42,8 @@ namespace testgit
             {
                 Console.Write("*");
             }
+
+            Console.ForegroundColor = aktTextFarbe;
         }
 
     }
