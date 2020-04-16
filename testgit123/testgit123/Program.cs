@@ -9,6 +9,7 @@ namespace testgit
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }
