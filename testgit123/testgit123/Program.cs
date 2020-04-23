@@ -12,8 +12,9 @@ namespace testgit
         static void Main(string[] args)
         {
             Titel("Dies ist ein Test",ConsoleColor.Green);
-
             Console.WriteLine("TESTMERGLER");
+            Menu();
+
             Console.ReadKey();
 
         }
@@ -46,5 +47,15 @@ namespace testgit
             Console.ForegroundColor = aktTextFarbe;
         }
 
+        /// <summary>
+        /// Ausgabe eines Auswahlmenüs
+        /// </summary>
+        static void Menu()
+        {
+            Console.WriteLine("1) 10 --> 2");
+            Console.WriteLine("2) 10 --> Hex");
+            Console.WriteLine("3) 2 --> 10");
+            Console.WriteLine("\n Bitte einen Menüpunkt auswählen");
+        }
     }
 }
