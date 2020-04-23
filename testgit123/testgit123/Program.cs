@@ -14,10 +14,15 @@ namespace testgit
             Titel("Dies ist ein Test",ConsoleColor.Green);
 
             Console.WriteLine("TESTMERGLER");
+            string binZahl = Binaerzahleinlesen();
             Console.ReadKey();
 
         }
-
+        /// <summary>
+        /// Bit einen Text formatiert als Text aus
+        /// </summary>
+        /// <param name="titel">Text der augegeben werden soll</param>
+        /// <param name="textfarbe">ConsolColor TextFarbe des Titels</param>
         static void Titel(string titel, ConsoleColor textfarbe)
         {
             int breite = Console.WindowWidth;
@@ -46,5 +51,15 @@ namespace testgit
             Console.ForegroundColor = aktTextFarbe;
         }
 
+        /// <summary>
+        /// Einlesen einer Binärzahl 
+        /// </summary>
+        /// <returns>String mit nur Nullen und Einsen</returns>
+        static string Binaerzahleinlesen()
+        {
+            Console.WriteLine("Bitte hier die Biärzahl eingeben (0/1): ");
+            string input = Console.ReadLine();
+            return input; 
+        }
     }
 }
